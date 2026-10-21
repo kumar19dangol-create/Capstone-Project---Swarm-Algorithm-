@@ -1,0 +1,100 @@
+{
+    "environment": {
+        "world_width": 200,
+        "world_height": 100,
+        "cell_size": 1.0,
+        "dt": 0.1
+    },
+
+    "swarm": {
+        "drone_count": 20,
+        "sensing_radius": 5.0,
+        "avoidance_distance": 3.0,
+        "neighbour_radius": 15.0,
+        "separation_distance": 3.0,
+        "communication_radius": 20.0,
+        "max_speed": 3.0,
+        "desired_speed": 1.0,
+        "steering_rate": 0.09,
+        "max_swarm_correction": 0.35,
+        "initial_velocity_x": 1.0,
+        "initial_velocity_y": 1.1
+    },
+
+    "forces": {
+        "separation_weight": 0.5,
+        "alignment_weight": 0.7,
+        "cohesion_weight": 0.8,
+        "goal_weight": 0.35,
+        "obstacle_weight": 2.0,
+        "restricted_weight": 2.0
+    },
+
+    "exploration": {
+        "goal_tolerance": 2.0,
+        "frontier_spacing": 8.0,
+        "communication_penalty_multiplier": 4.5,
+        "connectivity_penalty_per_component": 40.0,
+        "reconnection_communication_weight": 2.5
+    },
+
+    "target": {
+        "target_tolerance": 1.0,
+        "pause_duration": 3.0
+    },
+
+    "metrics": {
+        "coverage_target_percent": 95.0
+    },
+
+    "optimization": {
+        "planning_update_interval_frames": 12
+    },
+
+    "spawn": {
+        "edge_clearance": 2.0,
+        "drone_spacing": 4.0,
+        "max_attempts_per_drone": 2000
+    },
+
+    "editor": {
+        "brush_min": 1.0,
+        "brush_max": 15.0,
+        "brush_default": 2.5
+    },
+
+    "gui": {
+        "target_fps": 60,
+        "outer_margin": 18,
+        "header_height": 64,
+        "status_height": 54,
+        "sidebar_width": 320,
+        "gap": 14
+    },
+
+    "limits": {
+        "drone_count_min": 1,
+        "drone_count_max": 30,
+
+        "sensing_radius_min": 1.0,
+        "sensing_radius_max": 25.0,
+
+        "neighbour_radius_min": 1.0,
+        "neighbour_radius_max": 50.0,
+
+        "communication_radius_min": 1.0,
+        "communication_radius_max": 100.0,
+
+        "force_weight_min": 0.0,
+        "force_weight_max": 5.0
+    },
+
+    "rendering": {
+        "show_sensing_radius": true,
+        "show_neighbour_radius": true,
+        "show_communication_radius": true,
+        "show_communication_links": true,
+        "show_neighbour_links": true,
+        "show_frontier_goals": true
+    }
+}
