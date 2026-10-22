@@ -920,14 +920,17 @@ Press `Esc` to exit the application.
 
 The current simulator provides the main foundation required for autonomous multi-drone exploration, including belief-grid mapping, frontier exploration, swarm coordination, communication-aware goal selection, connectivity handling, hazard avoidance, target response, environment editing, and performance measurement.
 
-Further development will focus on improving and evaluating the existing system rather than replacing the core architecture. Areas for continued development include:
+Although the current parameters allow the swarm to operate successfully, they still require further optimisation. The existing values have mainly been tuned through repeated manual testing, which can be time-consuming, particularly because changing one parameter can affect several other swarm behaviours. The current simulation also focuses on swarm behaviour rather than accurately reproducing the physical dynamics and constraints of real drones.
 
-- Improving frontier distribution to reduce unnecessary travel between distant areas.
-- Further improving communication-connectivity and reconnection behaviour.
-- Refining and expanding performance metrics for experimental evaluation.
-- Improving parameter optimisation for different swarm sizes and environments.
-- Profiling and improving performance with larger numbers of drones.
-- Evaluating the effect of different swarm and communication parameters.
-- Improving path planning around more complex obstacle arrangements where required.
-- Moving remaining fixed simulation parameters into the central configuration system.
-- Conducting systematic experiments to evaluate exploration efficiency, target-finding performance, connectivity, and movement stability.
+Future development will therefore focus on:
+
+- **Systematic Parameter Optimisation** – Develop a more structured method for finding effective combinations of swarm parameters instead of relying primarily on repeated manual tuning.
+- **Realistic Drone Parameters** – Refine movement, speed, acceleration, turning, sensing, communication, and other parameters so that they better represent realistic drone behaviour and limitations.
+- **Automated Experimentation** – Run multiple simulations automatically using different parameter combinations and compare their performance using measurable results.
+- **Multi-Objective Evaluation** – Evaluate parameter configurations using factors such as map coverage time, target-finding time, connectivity, unnecessary travel, collision avoidance, and movement stability rather than optimising a single metric.
+- **Swarm-Size Evaluation** – Investigate how suitable parameter values change as the number of drones increases or decreases.
+- **Connectivity Optimisation** – Further improve communication-aware exploration and reconnection behaviour when drones become separated from the main communication network.
+- **Exploration Efficiency** – Improve frontier distribution to reduce unnecessary travel and prevent inefficient goal assignments.
+- **Performance Optimisation** – Profile and improve computational performance when operating larger swarms and more complex environments.
+- **Complex Environment Testing** – Evaluate the swarm across different obstacle layouts, restricted areas, target positions, and map configurations.
+- **Configuration Management** – Move remaining fixed simulation values into the central configuration system to make experimentation and comparison easier.
