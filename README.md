@@ -891,7 +891,7 @@ The simulator requires **Python**, **Pygame**, and **NumPy**.
 Clone the project and move into the project directory:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/kumar19dangol-create/Capstone-Project---Swarm-Algorithm-.git
 cd Capstone-Project---Swarm-Algorithm-
 ```
 
